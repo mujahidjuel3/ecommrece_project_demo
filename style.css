@@ -1,0 +1,666 @@
+/*reset code and common code starts here*/
+:root{
+    --primary-color: rgb(11,181,48);
+    --secondary-color: rgba(36,122,55,0.9);
+    padding: 0.5rem;
+    transition: all 0.3s;
+    border-radius: 0.6rem;
+    box-shadow: 0.1rem 0.2rem 0.8rem rgba(205,202,202,0.5);
+}
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-space-around{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn{
+    border: none;
+    padding: var(--padding);
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: var(--transition);
+    background-color: rgb(47, 255, 47);
+    color: black;
+    
+}
+
+.btn:hover{
+    background-color: blue;
+}
+
+.card{
+    box-shadow: var(--box-shadow);
+    border-radius: 0.6rem;
+    transition: var(--transition);
+    padding: var(--padding);
+    background-color: rgb(246, 252, 252);
+
+}
+
+.card:hover{
+    box-shadow: 0.1rem 0.2rem 0.8rem green;
+}
+
+.hr-design{
+    margin: 0.5rem 0;
+}
+
+.dot{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.black{
+    background-color: black;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.section-title{
+    font-size: 2rem;
+}
+/*reset code and common code starts here*/
+
+/*navbar starts here*/
+
+#menu-icon{
+    display: none;
+}
+
+nav{
+    font-family: roboto;
+    font-size: 1.2rem;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.nav-upper{
+    min-height: 10vh;
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.nav__list{
+    transition: var(--transition);
+}
+
+.nav__list:hover{
+    text-decoration: overline;
+    color: black;
+}
+
+.nav__link{
+    color: white;
+    transition: var(--transition);
+}
+
+.nav__link:hover{
+    color: black;
+}
+
+.profile-icon{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: white 1px solid;
+    filter: saturate(0);
+    transition: var(--transition);
+}
+
+.profile-icon:hover{
+    filter: saturate(1);
+}
+
+.nav-lower{
+    min-height: 10vh;
+    background-color: var(--secondary-color);
+    font-weight: bolder;
+}
+
+.nav__brand{
+    font-size: 2rem;
+}
+/*navbar starts here*/
+
+/*header starts here*/
+.header{
+    padding: 4rem 0;
+    height: 80vh;
+    background-image: url(/Image/juel.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.banner{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.banner__title{
+    font-size: 4rem;
+    color: orangered;
+    padding: 1rem;
+    border-radius: 0.6rem;
+}
+
+.features{
+    width: 100%;
+}
+
+.feature{
+    background-color: greenyellow ;
+    color: white;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    width: 15rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.feature:hover{
+    background-color: black;
+    transition: var(--transition);
+}
+
+.feature__icon{
+    font-size: 3rem;
+}
+   
+
+/*header ends here*/
+
+/*main starts here*/
+main{
+    padding: 4rem 0;
+    min-height: 80vh;
+}
+
+.sidebar{
+    flex: 1;
+    padding: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-self: flex-start;
+}
+
+h3{
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.main-content{
+    flex: 3;
+    padding: 0.6rem;
+}
+
+.actions__sort select{
+    padding: 0.6rem;
+}
+
+.actions__search input{
+    width: 15rem;
+    padding: 0.6rem;
+}
+
+.actions__search button{
+    margin-left: -0.3rem;
+    border: 1px solid;
+    padding: 0.65rem;
+}
+
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product{
+    position: relative;
+
+}
+
+.badge{
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: green;
+    color: white;
+    padding: 4px 8px;
+    text-align: center;
+    border-radius: 0.6rem;
+    z-index: 10;
+}
+
+.badge:hover{
+    background-color: blue;
+}
+
+.product__img{
+    width: 100%;
+    height: 15rem;
+    filter: saturate(0);
+    transition: transform 0.3s;
+}
+
+.product__img:hover{
+    filter: saturate(1);
+}
+
+.product__body{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.learn-more{
+    color: blue;
+}
+
+/*pagination starts here*/
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination__btn{
+    border-width: 1px 1px 1px 0;
+    border-style: solid;
+    padding: 0.2rem;
+    background-color: white;
+    color: black;
+}
+
+.pagination__btn:first-child{
+    border-width: 1px 1px 1px 1px;
+    border-style: solid;
+    padding: 0.2rem;
+}
+
+.pagination__btn:hover{
+    background-color: aqua;
+    box-shadow: 1px 1px 1px;
+}
+/*pagination ends here*/
+
+/*product details starts here*/
+.product__details-left{
+    flex: 1;
+}
+
+.product__details-left img{
+    height: 20rem;
+    width: 30rem;
+    filter: saturate(0);
+    transition: 0.3s;
+}
+
+.product__details-left img:hover{
+    filter: saturate(1);
+}
+
+.product__details-right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.product__button{
+    padding: 0.5rem;
+   
+}
+/*product details ends here*/
+
+/*cart design starts here*/
+
+.cart{
+    padding: var(--padding);
+    gap: 1rem;
+}
+
+.cart .card{
+    margin-bottom: 1rem;
+}
+
+.cart__items{
+    flex: 1;
+}
+
+.cart__items-heading{
+    background-color: grey;
+}
+
+.cart__items-action{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart__item input{
+    flex: 0.1;
+}
+
+.cart__item-img{
+    flex: 0.2;
+    width: 15rem;
+    height: 10rem;
+}
+
+.cart__item-desc{
+    flex: 0.4;
+}
+
+.cart__item-shipping{
+    margin-top: 0.5rem;
+    color: red;
+}
+
+.cart__item-actions{
+    flex: 0.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.cart__payment{
+    flex: 1;
+}
+
+.cart__payment-summary > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.cart__payment-btn{
+    width: 100%;
+}
+
+.cart__payment-methods h2{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cart__payment-methods > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.bank{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.bank:hover{
+    background-color: orangered;
+}
+
+/*cart design ends here*/
+
+
+/*register and login starts here*/
+.register, .login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    min-height: 60vh;
+}
+
+.register .card, .login .card{
+    width: 45rem;
+
+}
+
+.form{
+    flex-direction: column;
+    display: flex;
+    flex: 1;
+    gap: 1rem;
+}
+
+.form-control label{
+    flex: 0.1;
+    text-align: left;
+}
+
+.form-control input, textarea{
+    flex: 0.9;
+    padding: 0.5rem;
+    border: 1px solid;
+    
+}
+
+.form-control textarea{
+    resize: none;
+    height: 12vh;
+}
+
+.form-btn-field{
+    border-radius: 0.5rem;
+    padding: 0.5rem; 
+}
+
+.contact-btn{
+    width: 20%;
+    padding: 1%;
+    background-color: white;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-radius: 0.5%;
+}
+/*register and login ends here*/
+
+/*profile starts here*/
+.profile{
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.profile .card{
+    padding: 0.5rem;
+    width: 25rem;
+    height: 20rem;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile__img{
+    width: 15vh;
+    border-radius: 50%;
+    border: 1px solid;
+}
+
+.profile__buttons{
+    background-color: transparent;
+}
+
+.profile__edit-btn{
+    background-color: white;
+    border-style: none;
+}
+
+.profile__edit-btn:hover{
+    background-color: blue;
+}
+
+.profile__delete-btn{
+    background-color: white;
+    border-style: none;
+}
+
+.profile__delete-btn:hover{
+    background-color: blue;
+}
+
+
+/*profile ends here*/
+
+/*contact starts here*/
+.contact-section{
+    min-height: 52vh;
+}
+
+.contact-container{
+    margin-top: 5rem;
+}
+
+.contact-address{
+    flex: 1;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.contact-map{
+    width: 80%;
+}
+/*contact ends here*/
+
+/*main ends here*/
+
+
+
+/*footer starts here*/
+.footer{
+    background-color: var(--primary-color);
+    padding: 1rem;
+    min-height: 10vh;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.btn-subscribe{
+    margin-left: -5px;
+}
+
+.footer__input{
+    border: none;
+    padding: var(--padding);
+    width: 20rem;
+}
+
+
+
+/*footer ends here*/
+
+
+
+
+/*responsive starts here*/
+
+@media (max-width: 992px) {
+    .flex-space-around{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+
+    }
+
+    #menu-icon{
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+        cursor: pointer;
+    }
+
+    .hidden{
+        display: none;
+    }
+
+    .header{
+        height: 100vh;
+    }
+
+    .products{
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    .cart__items, .cart__payment{
+        width: 90%;
+    }
+
+    .form, .form-control{
+        width: 100%;
+    }
+
+    .form-control input,textarea{
+        width: 80%;
+    }
+
+    .contact-address{
+        width: 100%;
+    }
+
+
+    .register .card, .login .card{
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .flex-center{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 0;
+    .products{
+        grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    
+}
+/*responsive starts here*/
